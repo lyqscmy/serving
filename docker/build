@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sudo docker run -it \
+     --mount type=bind,source=$HOME/git/serving,target=/serving \
+     --mount type=bind,source=$/data/bazel,target=/data/bazel \
+     lyq/serving-builder
